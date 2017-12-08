@@ -5,7 +5,7 @@
 # Args:                                                                               #
 #   genus: genus profile, column is sample and row is genus                           #
 #   sample.phe: phenotypes profile, column is phenotype and row is sample             #
-#¡¡ sample.state: the state of sample, column is state(factor) and row is sample      #
+#   sample.state: the state of sample, column is state(factor) and row is sample      #
 #   prefix: output file prefix                                                        #
 #   top: show the largest CAP genus                                                   #
 # output: figure of db-RDA                                                            # 
