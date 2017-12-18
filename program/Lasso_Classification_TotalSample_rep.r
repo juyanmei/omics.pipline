@@ -78,7 +78,7 @@ for (i in 1:repeat.time) {
     name[j, i] <- paste("cv_fold", j, "rep", i, sep = "_")
   }
 }
-name <- matrix(name, 1, 100)
+name <- matrix(name, 1, cv.time * repeat.time)
 colnames(rep.coef) <- name
 
 # nonzero coefficient number in samples at least 5: nozero.num
