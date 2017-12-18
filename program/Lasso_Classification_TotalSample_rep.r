@@ -86,12 +86,12 @@ colnames(rep.coef) <- name
 nozero.var <- apply(rep.coef, 1, function(x) length(which(x != 0 )))
 nozero.num <- apply(rep.coef, 2, function(x) length(which(x != 0 )))
 rep.coef.nozero <- rep.coef[which(nozero.var >= 50), which(nozero.num >= 5)]
-coef.name <- paste(prefix, ".txt")
+coef.name <- paste(prefix, "txt", sep = ".")
 write.table(rep.coef.nozero, coef.name, quote = F, row.names = T, sep = "\t")
 
 # ROC
 final.pred <- apply(rep.pred, 1, function(x) mean(x, na.rm = T))
-pdf.name <- paste(prefix, ".pdf")
+pdf.name <- paste(prefix, "pdf", sep = ".")
 pdf(pdf.name)
 plot_roc(y, final.pred)
 dev.off()
